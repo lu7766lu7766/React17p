@@ -1,0 +1,39 @@
+/* Import tailwind css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.btn {
+  @apply font-bold;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded;
+}
+.btn-blue {
+  @apply bg-blue-500;
+  @apply text-white;
+}
+.btn-yellow {
+  @apply bg-yellow-200;
+  @apply text-black;
+}
+.btn-blue:hover {
+  @apply bg-blue-600;
+}
+.my-nav {
+  @apply antialiased;
+  @apply flex;
+  @apply justify-center;
+  @apply ml-4;
+  @apply mr-4;
+}
+.my-nav-item {
+  @apply px-4;
+  @apply py-2;
+  @apply bg-purple-100;
+}
+.my-nav-item-active {
+  @apply border-b-2;
+  @apply border-purple-500;
+  color: "red";
+}
