@@ -13,6 +13,7 @@ const If = lazy(() => import("./pages/If"));
 const List = lazy(() => import("./pages/List"));
 const Watch = lazy(() => import("./pages/Watch"));
 const Dynamic = lazy(() => import("./pages/Dynamic"));
+const Computed = lazy(() => import("./pages/Computed"));
 
 export default function App(): JSX.Element {
   const [name, setName] = useState("Jac");
@@ -85,6 +86,11 @@ export default function App(): JSX.Element {
       routeTo: "/dynamic",
       component: Dynamic,
       title: "dynamic"
+    },
+    {
+      routeTo: "/computed",
+      component: Computed,
+      title: "computed"
     }
   ];
 
