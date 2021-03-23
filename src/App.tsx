@@ -14,6 +14,7 @@ const List = lazy(() => import("./pages/List"));
 const Watch = lazy(() => import("./pages/Watch"));
 const Dynamic = lazy(() => import("./pages/Dynamic"));
 const Computed = lazy(() => import("./pages/Computed"));
+const Html = lazy(() => import("./pages/Html"));
 
 export default function App(): JSX.Element {
   const [name, setName] = useState("Jac");
@@ -23,75 +24,80 @@ export default function App(): JSX.Element {
       routeTo: "/",
       component: Index,
       props: {
-        name
+        name,
       },
-      title: "index"
+      title: "index",
     },
     {
       routeTo: "/store",
       component: Store,
-      title: "store"
+      title: "store",
     },
     {
       routeTo: "/slot",
       component: Slot,
       props: {
-        children: <div className="font-black text-5xl">hello</div>
+        children: <div className="font-black text-5xl">hello</div>,
       },
-      title: "slot"
+      title: "slot",
     },
     {
       routeTo: "/slot-name",
       component: SlotName,
       props: {
         top: <span>top</span>,
-        bottom: <span>bottom</span>
+        bottom: <span>bottom</span>,
       },
-      title: "slot-name"
+      title: "slot-name",
     },
     {
       routeTo: "/emit",
       component: Emit,
       props: {
-        onClick: alertTest
+        onClick: alertTest,
       },
-      title: "emit"
+      title: "emit",
     },
     {
       routeTo: "/event-bus",
       component: EventBus,
-      title: "event-bus"
+      title: "event-bus",
     },
     {
       routeTo: "/pure",
       component: Pure,
-      title: "pure"
+      title: "pure",
     },
     {
       routeTo: "/if",
       component: If,
-      title: "if"
+      title: "if",
     },
     {
       routeTo: "/list",
       component: List,
-      title: "list"
+      title: "list",
     },
     {
       routeTo: "/watch",
       component: Watch,
-      title: "watch"
+      title: "watch",
     },
     {
       routeTo: "/dynamic",
       component: Dynamic,
-      title: "dynamic"
+      title: "dynamic",
     },
     {
       routeTo: "/computed",
       component: Computed,
-      title: "computed"
-    }
+      title: "computed",
+    },
+    {
+      routeTo: "/html",
+      component: Html,
+      title: "html",
+    },
   ];
 
   useEffect(() => {
